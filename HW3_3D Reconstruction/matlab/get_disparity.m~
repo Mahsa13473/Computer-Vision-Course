@@ -1,0 +1,68 @@
+function dispM = get_disparity(im1, im2, maxDisp, windowSize)
+% GET_DISPARITY creates a disparity map from a pair of rectified images im1 and
+%   im2, given the maximum disparity MAXDISP and the window size WINDOWSIZE.
+pad_size = (windowSize-1)/2;
+mask = ones([windowSize, windowSize], 'double');
+im1pad = padarray(im1,[pad_size pad_size], 0);
+im2pad = padarray(im2,[pad_size pad_size+maxDisp], 0);
+dispM = zeros(size(im1), 'double');
+
+for y=1:size(im1, 1)
+    for x=1:size(im1, 2)
+        im1_patch = im1pad(y : y + windowSize-1, x : x + windowSize-1);
+        % im2_patch = im2pad(y : y + windowSize-1, x : x + maxDisp + windowSize-1);
+        % 'valid' ? Return only parts of the convolution that are computed without zero-padded edges
+%         c1 = conv2(im1_patch, mask, 'valid');
+%         c2 = conv2(im2_patch, mask, 'valid');
+        % size(im1_patch)
+        for d=1:maxDisp
+            im2_patch = im2pad(y : y + windowSize-1, x + maxDisp - d : x + maxDisp - d + windowSize-1);
+            distance(d) = sum(sum((im1_patch-im2_patch).^2));
+        end
+        index_min = find(distance == min(distance));
+        index_min = index_min(1); % find the first one
+        dispM(y, x) = index_min + maxDisp -1;
+            
+    end
+end
+
+
+
+
+pad_size = (windowSize-1)/2;
+mask = ones([windowSize, windowSize], 'double');
+im1pad = padarray(im1,[pad_size pad_size], 0);
+im2pad = padarray(im2,[pad_size pad_size+maxDisp], 0);
+dispM = zeros(size(im1), 'double');
+
+
+% w = (windowSize-1)/2;
+% 
+% im1pad = padarray(im1,[w w], 0);
+% dpad = w+maxDisp;
+% im2pad = padarray(im2,[w dpad], 0);
+% % im2pad = padarray(im2,[w w], 0);
+% mask = ones([windowSize, windowSize], 'double');
+% 
+% dispM = zeros(size(im1), 'double');
+% [nrows, ncols] = size(im1);
+% for y=1:nrows
+%     for x=1:ncols
+%         im1_slice = im1pad(y : y + windowSize-1, x : x + windowSize-1);
+%         xlim1 = x + dpad - w -maxDisp;
+%         xlim2 = x + dpad + w;
+%         im2_slice = im2pad(y : y + windowSize-1, xlim1 : xlim2);
+%         s1 = conv2(im1_slice, mask, 'valid');
+%         s2 = conv2(im2_slice, mask, 'valid');
+%         d = (s2-s1).^2;
+%         
+%         [~, index] = min(d);
+%         dispM(y, x) = (maxDisp-index -1);
+%     end
+% end
+
+
+%         distance = (c2-c1).^2;
+%         index_min = find(distance == min(distance));
+%         index_min = index_min(1); % find the first one
+%         dispM(y, x) = (maxDisp - index_min -1);
