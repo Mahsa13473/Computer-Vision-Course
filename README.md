@@ -55,7 +55,7 @@ Assignments for Computer Vision course, Spring 2020, SFU
   - Better pixel features 
 
 ## Assignment 5 
-### [Digit Recognition with Convolutional Neural Networks by Python](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW5_Digit%20Recognition%20with%20Convolutional%20Neural%20Networks)
+### [Digit Recognition with Convolutional Neural Networks by MATLAB](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW5_Digit%20Recognition%20with%20Convolutional%20Neural%20Networks)
 - Part 1: Forward Pass
 - Part 2: Back propagation
 - Part 3: Training
