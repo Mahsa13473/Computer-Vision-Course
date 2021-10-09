@@ -3,7 +3,7 @@
 Assignments for Computer Vision course, Spring 2020, SFU
 
 ## Assignment 1 
-### [Image Filtering and Hough Transform by Matlab](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW1_Image%20Filtering%20and%20Hough%20Transform)
+### [Image Filtering and Hough Transform by MATLAB](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW1_Image%20Filtering%20and%20Hough%20Transform)
 - Convolution
 - Edge detection
 - Hough Transform
@@ -11,7 +11,7 @@ Assignments for Computer Vision course, Spring 2020, SFU
 - Fitting line segments for visualization
 
 ## Assignment 2 
-### [Augmented Reality with Planar Homographies by Matlab](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW2_Augmented%20Reality%20with%20Planar%20Homographies)
+### [Augmented Reality with Planar Homographies by MATLAB](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW2_Augmented%20Reality%20with%20Planar%20Homographies)
 - Feature Detection, Description, and Matching
 - BRIEF and Rotations
 - Homography Computation
@@ -20,7 +20,7 @@ Assignments for Computer Vision course, Spring 2020, SFU
 - HarryPotterizing a Book
 
 ## Assignment 3 
-### [3D Reconstruction by Matlab](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW3_3D%20Reconstruction)
+### [3D Reconstruction by MATLAB](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW3_3D%20Reconstruction)
 - Sparse reconstruction
   - Implement the eight point algorithm
   - Find epipolar correspondences
@@ -37,7 +37,7 @@ Assignments for Computer Vision course, Spring 2020, SFU
   - Project a CAD model to the image 
 
 ## Assignment 4
-### [Scene recognition with bag of words by Matlab](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW4_Scene%20recognition%20with%20bag%20of%20words)
+### [Scene recognition with bag of words by MATLAB](https://github.com/Mahsa13473/Computer-Vision-Course/tree/master/HW4_Scene%20recognition%20with%20bag%20of%20words)
 - Part 1: Build Visual Words Dictionary
   - Extract Filter Responses
   - Collect sample of points from image
